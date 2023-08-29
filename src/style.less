@@ -1,0 +1,98 @@
+// Typography
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+// Primary Colors
+@Blue: hsl(246, 80%, 60%);
+@Orange: hsl(15, 100%, 70%); //work
+@Softblue: hsl(195, 74%, 62%); //play
+@lightred: hsl(348, 100%, 68%); //study
+@LimeGreen: hsl(145, 58%, 55%); //exercise
+@Violet: hsl(264, 64%, 52%); //social
+@yellow: hsl(43, 84%, 65%); //self care
+
+// Neutral Colors
+
+@VeryDarkBlue: hsl(226, 43%, 10%);
+@DarkBlue: hsl(235, 46%, 20%);
+@DesaturatedBlue: hsl(235, 45%, 61%);
+@Paleblue: hsl(236, 100%, 87%);
+
+// Mixins
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik";
+  background-color: @VeryDarkBlue;
+
+  main {
+    display: flex;
+
+    .profile-section {
+      margin: 100px auto;
+
+      .profile-options {
+        height: 180px;
+        width: 280px;
+        background-color: @DarkBlue;
+        border-radius: 16px;
+
+        .profile {
+          height: 60%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+
+          border-radius: 16px;
+          background-color: @Blue;
+
+          .sec-1 {
+            height: 64px;
+            width: 64px;
+            margin-left: 32px;
+            .center();
+            background-color: #fff;
+            border-radius: 50%;
+
+            img {
+              height: 60px;
+              width: 60px;
+              border-radius: 50%;
+            }
+          }
+
+          .sec-2 {
+            margin-left: 16px;
+
+            p {
+              margin: 0 0 2px 0;
+              font-size: 12px;
+              color: @Paleblue;
+              font-weight: 300;
+            }
+
+            p:nth-child(2) {
+              font-size: 18px;
+              color: #fff;
+            }
+          }
+        }
+        .options {
+          height: 40%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          color: @DesaturatedBlue;
+        }
+      }
+    }
+  }
+}
