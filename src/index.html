@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Time-Tracking-Dashboard</title>
     <link rel="stylesheet/less" type="text/css" href="style.less" />
-    <script type="text/javascript" src="main.js"></script>
+    <link
+      rel="shortcut icon"
+      href="img/favicon-32x32.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <main>
@@ -21,9 +25,15 @@
             </div>
           </div>
           <div class="options">
-            <p>Daily</p>
-            <p>Weekly</p>
-            <p>Monthly</p>
+            <p id="daily-option" class="set-options active" data-option="daily">
+              Daily
+            </p>
+            <p id="weekly-option" class="set-options" data-option="weekly">
+              Weekly
+            </p>
+            <p id="monthly-option" class="set-options" data-option="monthly">
+              Monthly
+            </p>
           </div>
         </div>
       </section>
@@ -33,12 +43,12 @@
           <img class="icon-card" src="img/icon-work.svg" alt="" />
           <div class="info-card">
             <div class="categ-more">
-              <p class="category">Work</p>
+              <p class="category"></p>
               <p class="more">...</p>
             </div>
             <div class="period-hours">
-              <p class="hour">4hrs</p>
-              <p class="period">Last Week - 10hrs</p>
+              <p class="hour"></p>
+              <p class="period" id="period"></p>
             </div>
           </div>
         </div>
@@ -47,12 +57,12 @@
           <img class="icon-card" src="img/icon-play.svg" alt="" />
           <div class="info-card">
             <div class="categ-more">
-              <p class="category">Play</p>
+              <p class="category"></p>
               <p class="more">...</p>
             </div>
             <div class="period-hours">
-              <p class="hour">4hrs</p>
-              <p class="period">Last Week - 10hrs</p>
+              <p class="hour"></p>
+              <p class="period"></p>
             </div>
           </div>
         </div>
@@ -61,12 +71,12 @@
           <img class="icon-card" src="img/icon-study.svg" alt="" />
           <div class="info-card">
             <div class="categ-more">
-              <p class="category">Study</p>
+              <p class="category"></p>
               <p class="more">...</p>
             </div>
             <div class="period-hours">
-              <p class="hour">4hrs</p>
-              <p class="period">Last Week - 10hrs</p>
+              <p class="hour"></p>
+              <p class="period"></p>
             </div>
           </div>
         </div>
@@ -75,12 +85,12 @@
           <img class="icon-card" src="img/icon-exercise.svg" alt="" />
           <div class="info-card">
             <div class="categ-more">
-              <p class="category">Exercise</p>
+              <p class="category"></p>
               <p class="more">...</p>
             </div>
             <div class="period-hours">
-              <p class="hour">4hrs</p>
-              <p class="period">Last Week - 10hrs</p>
+              <p class="hour"></p>
+              <p class="period"></p>
             </div>
           </div>
         </div>
@@ -89,12 +99,12 @@
           <img class="icon-card" src="img/icon-social.svg" alt="" />
           <div class="info-card">
             <div class="categ-more">
-              <p class="category">Social</p>
+              <p class="category"></p>
               <p class="more">...</p>
             </div>
             <div class="period-hours">
-              <p class="hour">4hrs</p>
-              <p class="period">Last Week - 10hrs</p>
+              <p class="hour"></p>
+              <p class="period"></p>
             </div>
           </div>
         </div>
@@ -103,17 +113,19 @@
           <img class="icon-card" src="img/icon-self-care.svg" alt="" />
           <div class="info-card">
             <div class="categ-more">
-              <p class="category">Self Care</p>
+              <p class="category"></p>
               <p class="more">...</p>
             </div>
             <div class="period-hours">
-              <p class="hour">4hrs</p>
-              <p class="period">Last Week - 10hrs</p>
+              <p class="hour"></p>
+              <p class="period"></p>
             </div>
           </div>
         </div>
       </section>
     </main>
+
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script src="main.js" type="module"></script>
   </body>
 </html>
