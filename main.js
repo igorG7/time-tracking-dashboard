@@ -1,4 +1,4 @@
-import { data } from "./json/data.js";
+import { data } from "./src/json/data.js";
 
 const dataTimes = data;
 
