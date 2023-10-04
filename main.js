@@ -1,6 +1,10 @@
 import { data } from "./src/json/data.js";
+import { listCards } from "./src/components/list_cards.js";
 
 const dataTimes = data;
+const sectionCards = document.querySelector("[data-cardList]");
+
+sectionCards.innerHTML = listCards(dataTimes);
 
 const options = Array.from(document.getElementsByClassName("set-options"));
 const category = Array.from(document.getElementsByClassName("category"));
@@ -14,16 +18,16 @@ const firstState = () => {
   category.map((item, index) => {
     const mapItems = dataTimes.map((item) => item.title);
     item.innerHTML = mapItems[index];
+  });
 
-    hour.map((item, index) => {
-      const mapItems = dataTimes.map((item) => item.timeframes.daily.current);
-      item.innerHTML = `${mapItems[index]}hrs`;
-    });
+  hour.map((item, index) => {
+    const mapItems = dataTimes.map((item) => item.timeframes.daily.current);
+    item.innerHTML = `${mapItems[index]}hrs`;
+  });
 
-    period.map((item, index) => {
-      const mapItems = dataTimes.map((item) => item.timeframes.daily.previous);
-      item.innerHTML = `Last Day - ${mapItems[index]}hrs`;
-    });
+  period.map((item, index) => {
+    const mapItems = dataTimes.map((item) => item.timeframes.daily.previous);
+    item.innerHTML = `Last Day - ${mapItems[index]}hrs`;
   });
 };
 
