@@ -30,7 +30,7 @@ export const listCards = (data) => {
       </div>
       <div class="period-hours">
         <p class="hour"></p>
-        <p class="period" id="period"></p>
+        <p class="period"></p>
       </div>
     </div>
     </div>
